@@ -31,7 +31,19 @@ public class game extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        webView.loadUrl("javascript:(function(){ let inputs = document.getElementsByName('radio'); for(var i = 0; i < inputs.length; i++){ inputs[i].disabled = false; }})()");
+        webView.loadUrl(
+            "javascript:(function(){" +
+                "let inputs = document.getElementsByName('radio');" +
+                "for(var i = 0; i < inputs.length; i++){" +
+                    "inputs[i].disabled = false;" +
+                "}" +
+                "let labels = document.getElementsByTagName('label');" +
+                "for(var i = 0; i < labels.length; i++){" +
+                    "if(labels[i].htmlFor == 'HOUSE'){" +
+                        "labels[i].style.backgroundColor = 'coral';" +
+                    "}" +
+                "}" +
+            "})()");
         return true;
     }
 
