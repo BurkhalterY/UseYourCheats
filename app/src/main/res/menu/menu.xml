@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/hihi"
-        android:title="Hihihi !"
+        android:id="@+id/unlockAnswer"
+        android:title="hihi"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/showHouse"
+        android:title="hihi"
+        app:showAsAction="ifRoom"/>
 </menu>
